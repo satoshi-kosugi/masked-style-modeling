@@ -1,4 +1,5 @@
 # Personalized Image Enhancement Featuring Masked Style Modeling
+This is the official implementation of the paper in TCSVT. [[paper]](https://ieeexplore.ieee.org/abstract/document/10149499)
 
 <p align="left">
 <img src="figs/method.jpg" alt="architecture" width="875px">
@@ -12,6 +13,9 @@ To install the Python libraries,
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+## Dataset
+The details of the dataset are described in the [data/](./data/) directory.
 
 ## Training
 Start the first training step.
@@ -35,3 +39,14 @@ python test.py --save_dir pretrained_models
 
 ## Reference
 Our implementation is based on [StarEnhancer](https://github.com/IDKiro/StarEnhancer). We would like to thank them.
+
+
+## Citation
+If you find our research useful in your research, please consider citing:
+
+    @article{kosugi2023personalized,
+      title={Personalized Image Enhancement Featuring Masked Style Modeling},
+      author={Kosugi, Satoshi and Yamasaki, Toshihiko},
+      journal={IEEE Transactions on Circuits and Systems for Video Technology},
+      year={2023}
+    }
