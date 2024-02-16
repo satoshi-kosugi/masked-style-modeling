@@ -32,7 +32,7 @@ Test our model.
 ```Shell
 python test.py
 ```
-To test our model with the pretrained models, please download the pretrained models from [here](https://www.hal.t.u-tokyo.ac.jp/~kosugi/masked-style-modeling/pretrained_models.tar.gz).
+To test our model with the pretrained models, please download the pretrained models from [here](https://drive.google.com/file/d/1NVkmB8ADiux1rImRuQXgH1e9g4EU8F8Z/view).
 ```Shell
 python test.py --save_dir pretrained_models
 ```
