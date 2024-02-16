@@ -5,10 +5,12 @@ We use two types of data: the FiveK dataset and images downloaded from Flickr.
 ## FiveK dataset
 
 We provide pre-processed images from the FiveK dataset.
-These can be downloaded using the following command:
-```Shell
-sh download_fivek.sh
-```
+These can be downloaded from the following links.
+
+[[test.tar.gz]](https://drive.google.com/file/d/1D6F45yyO_ukk64Ym3n5iTF7wF9Sr1wu3/view?usp=sharing)
+[[test_ref.tar.gz]](https://drive.google.com/file/d/1Gi4nFlMvXH7djAsOMaBuGQKtjfxjerRq/view?usp=sharing)
+[[train_part1.tar.gz]](https://drive.google.com/file/d/1OQlfPrwWGXObEj9L_96NoNcVF1v7dG4I/view?usp=sharing)
+[[train_part2.tar.gz]](https://drive.google.com/file/d/1QPlpeRwLb2EnQanILkhag_ZXETxzZynO/view?usp=sharing)
 
 This should result in the following directory structure.
 ```
@@ -58,12 +60,13 @@ masked-style-modeling/data/
 By applying a degrading model to the downloaded images, we create pairs of pseudo original and retouched images.
 We use [Deep Symmetric Network](https://github.com/lin-zhao-resoLve/Deep-Symmetric-Network-Enhancement) as the degrading model.
 
+Download the weights of the degradation model [[degrading_model.pth]](https://drive.google.com/file/d/18h_0xruPTnEWEzJou3AG04IRxWR_KVMn/view?usp=sharing) and place it in `masked-style-modeling/data/`.
+
 Run the degrading process by executing the following code.
 Before proceeding, ensure that you have installed all libraries required by Deep Symmetric Network.
 ```Shell
 git clone https://github.com/lin-zhao-resoLve/Deep-Symmetric-Network-Enhancement.git
 cp degrade.py Deep-Symmetric-Network-Enhancement/codes/
-wget https://www.hal.t.u-tokyo.ac.jp/~kosugi/masked-style-modeling/data/degrading_model.pth
 cd Deep-Symmetric-Network-Enhancement/codes/
 python degrade.py --opt options/test/test_for_fiveK.yml --path_to_data ../../
 ```
